@@ -69,87 +69,21 @@
 </span></code></pre>
 <h2><a class="anchor" aria-hidden="true" id="cameraprops"></a><a href="#cameraprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CameraProps</h2>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th style="text-align:center">默认值</th>
-      <th style="text-align:center">必填</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>mode</td>
-      <td><code>&quot;normal&quot; | &quot;scanCode&quot;</code></td>
-      <td style="text-align:center"><code>&quot;normal&quot;</code></td>
-      <td style="text-align:center">否</td>
-      <td>模式，有效值为normal, scanCode</td>
-    </tr>
-    <tr>
-      <td>resolution</td>
-      <td><code>&quot;low&quot; | &quot;medium&quot; | &quot;high&quot;</code></td>
-      <td style="text-align:center"><code>&quot;medium&quot;</code></td>
-      <td style="text-align:center">否</td>
-      <td>分辨率，不支持动态修改</td>
-    </tr>
-    <tr>
-      <td>devicePosition</td>
-      <td><code>&quot;front&quot; | &quot;back&quot;</code></td>
-      <td style="text-align:center"><code>&quot;back&quot;</code></td>
-      <td style="text-align:center">否</td>
-      <td>摄像头朝向</td>
-    </tr>
-    <tr>
-      <td>flash</td>
-      <td><code>&quot;auto&quot; | &quot;on&quot; | &quot;off&quot; | &quot;torch&quot;</code></td>
-      <td style="text-align:center"><code>&quot;auto&quot;</code></td>
-      <td style="text-align:center">否</td>
-      <td>闪光灯</td>
-    </tr>
-    <tr>
-      <td>frameSize</td>
-      <td><code>&quot;medium&quot; | &quot;small&quot; | &quot;large&quot;</code></td>
-      <td style="text-align:center"><code>&quot;medium&quot;</code></td>
-      <td style="text-align:center">否</td>
-      <td>指定期望的相机帧数据尺寸</td>
-    </tr>
-    <tr>
-      <td>scanArea</td>
-      <td><code>number[]</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>扫码识别区域，格式为[x, y, w, h]，<br />x,y是相对于camera显示区域的左上角，<br />w,h为区域宽度，单位px，仅在 mode=&quot;scanCode&quot; 时生效</td>
-    </tr>
-    <tr>
-      <td>onStop</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>摄像头在非正常终止时触发，<br />如退出后台等情况</td>
-    </tr>
-    <tr>
-      <td>onError</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>用户不允许使用摄像头时触发</td>
-    </tr>
-    <tr>
-      <td>onInitDone</td>
-      <td><code>BaseEventOrigFunction&lt;onInitDoneEventDetail&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>相机初始化完成时触发</td>
-    </tr>
-    <tr>
-      <td>onScanCode</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>在成功识别到一维码时触发，<br />仅在 mode=&quot;scanCode&quot; 时生效</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th style="text-align:center">默认值</th><th style="text-align:center">必填</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>mode</td><td>&quot;normal&quot; or &quot;scanCode&quot;</td><td style="text-align:center"><code>&quot;normal&quot;</code></td><td style="text-align:center">否</td><td>模式，有效值为normal, scanCode</td></tr>
+<tr><td>resolution</td><td>&quot;low&quot; or &quot;medium&quot; or &quot;high&quot;</td><td style="text-align:center"><code>&quot;medium&quot;</code></td><td style="text-align:center">否</td><td>分辨率，不支持动态修改</td></tr>
+<tr><td>devicePosition</td><td>&quot;front&quot; or &quot;back&quot;</td><td style="text-align:center"><code>&quot;back&quot;</code></td><td style="text-align:center">否</td><td>摄像头朝向</td></tr>
+<tr><td>flash</td><td>&quot;auto&quot; or &quot;on&quot; or &quot;off&quot; or &quot;torch&quot;</td><td style="text-align:center"><code>&quot;auto&quot;</code></td><td style="text-align:center">否</td><td>闪光灯</td></tr>
+<tr><td>frameSize</td><td>&quot;medium&quot; or &quot;small&quot; or &quot;large&quot;</td><td style="text-align:center"><code>&quot;medium&quot;</code></td><td style="text-align:center">否</td><td>指定期望的相机帧数据尺寸</td></tr>
+<tr><td>scanArea</td><td><code>number[]</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>扫码识别区域，格式为[x, y, w, h]，<br />x,y是相对于camera显示区域的左上角，<br />w,h为区域宽度，单位px，仅在 mode=&quot;scanCode&quot; 时生效</td></tr>
+<tr><td>onStop</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>摄像头在非正常终止时触发，<br />如退出后台等情况</td></tr>
+<tr><td>onError</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>用户不允许使用摄像头时触发</td></tr>
+<tr><td>onInitDone</td><td><code>BaseEventOrigFunction&lt;onInitDoneEventDetail&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>相机初始化完成时触发</td></tr>
+<tr><td>onScanCode</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>在成功识别到一维码时触发，<br />仅在 mode=&quot;scanCode&quot; 时生效</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="api-支持度"></a><a href="#api-支持度" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h3>
 <table>
@@ -172,135 +106,70 @@
 <h3><a class="anchor" aria-hidden="true" id="mode"></a><a href="#mode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mode</h3>
 <p>mode 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>normal</td>
-      <td>相机模式</td>
-    </tr>
-    <tr>
-      <td>scanCode</td>
-      <td>扫码模式</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>normal</td><td>相机模式</td></tr>
+<tr><td>scanCode</td><td>扫码模式</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="resolution"></a><a href="#resolution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>resolution</h3>
 <p>resolution 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>low</td>
-      <td>低</td>
-    </tr>
-    <tr>
-      <td>medium</td>
-      <td>中</td>
-    </tr>
-    <tr>
-      <td>high</td>
-      <td>高</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>low</td><td>低</td></tr>
+<tr><td>medium</td><td>中</td></tr>
+<tr><td>high</td><td>高</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="deviceposition"></a><a href="#deviceposition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>devicePosition</h3>
 <p>device-position 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>front</td>
-      <td>前置</td>
-    </tr>
-    <tr>
-      <td>back</td>
-      <td>后置</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>front</td><td>前置</td></tr>
+<tr><td>back</td><td>后置</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="flash"></a><a href="#flash" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>flash</h3>
 <p>flash 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>auto</td>
-      <td>自动</td>
-    </tr>
-    <tr>
-      <td>on</td>
-      <td>打开</td>
-    </tr>
-    <tr>
-      <td>off</td>
-      <td>关闭</td>
-    </tr>
-    <tr>
-      <td>torch</td>
-      <td>常亮</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>auto</td><td>自动</td></tr>
+<tr><td>on</td><td>打开</td></tr>
+<tr><td>off</td><td>关闭</td></tr>
+<tr><td>torch</td><td>常亮</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="framesize"></a><a href="#framesize" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>frameSize</h3>
 <p>frame-size 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>small</td>
-      <td>小尺寸帧数据</td>
-    </tr>
-    <tr>
-      <td>medium</td>
-      <td>中尺寸帧数据</td>
-    </tr>
-    <tr>
-      <td>large</td>
-      <td>大尺寸帧数据</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>small</td><td>小尺寸帧数据</td></tr>
+<tr><td>medium</td><td>中尺寸帧数据</td></tr>
+<tr><td>large</td><td>大尺寸帧数据</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="oninitdoneeventdetail"></a><a href="#oninitdoneeventdetail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onInitDoneEventDetail</h3>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>maxZoom</td>
-      <td><code>number</code></td>
-      <td>最大变焦</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>maxZoom</td><td><code>number</code></td><td>最大变焦</td></tr>
+</tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="api-支持度-1"></a><a href="#api-支持度-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h2>
 <table>

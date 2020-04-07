@@ -70,124 +70,50 @@
 <h2><a class="anchor" aria-hidden="true" id="参数"></a><a href="#参数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参数</h2>
 <h3><a class="anchor" aria-hidden="true" id="option"></a><a href="#option" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Option</h3>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th style="text-align:center">必填</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>deviceId</td>
-      <td><code>string</code></td>
-      <td style="text-align:center">是</td>
-      <td>蓝牙设备 id</td>
-    </tr>
-    <tr>
-      <td>serviceId</td>
-      <td><code>string</code></td>
-      <td style="text-align:center">是</td>
-      <td>蓝牙服务 uuid，需要使用 <code>getBLEDeviceServices</code> 获取</td>
-    </tr>
-    <tr>
-      <td>complete</td>
-      <td><code>(res: BluetoothError) =&gt; void</code></td>
-      <td style="text-align:center">否</td>
-      <td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
-    </tr>
-    <tr>
-      <td>fail</td>
-      <td><code>(res: BluetoothError) =&gt; void</code></td>
-      <td style="text-align:center">否</td>
-      <td>接口调用失败的回调函数</td>
-    </tr>
-    <tr>
-      <td>success</td>
-      <td><code>(res: SuccessCallbackResult) =&gt; void</code></td>
-      <td style="text-align:center">否</td>
-      <td>接口调用成功的回调函数</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th style="text-align:center">必填</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>deviceId</td><td><code>string</code></td><td style="text-align:center">是</td><td>蓝牙设备 id</td></tr>
+<tr><td>serviceId</td><td><code>string</code></td><td style="text-align:center">是</td><td>蓝牙服务 uuid，需要使用 <code>getBLEDeviceServices</code> 获取</td></tr>
+<tr><td>complete</td><td><code>(res: BluetoothError) =&gt; void</code></td><td style="text-align:center">否</td><td>接口调用结束的回调函数（调用成功、失败都会执行）</td></tr>
+<tr><td>fail</td><td><code>(res: BluetoothError) =&gt; void</code></td><td style="text-align:center">否</td><td>接口调用失败的回调函数</td></tr>
+<tr><td>success</td><td><code>(res: SuccessCallbackResult) =&gt; void</code></td><td style="text-align:center">否</td><td>接口调用成功的回调函数</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="successcallbackresult"></a><a href="#successcallbackresult" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SuccessCallbackResult</h3>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>characteristics</td>
-      <td><code>BLECharacteristic[]</code></td>
-      <td>设备特征值列表</td>
-    </tr>
-    <tr>
-      <td>errMsg</td>
-      <td><code>string</code></td>
-      <td>成功：ok，错误：详细信息</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>characteristics</td><td><code>BLECharacteristic[]</code></td><td>设备特征值列表</td></tr>
+<tr><td>errMsg</td><td><code>string</code></td><td>成功：ok，错误：详细信息</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="blecharacteristic"></a><a href="#blecharacteristic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BLECharacteristic</h3>
 <p>设备特征值列表</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>properties</td>
-      <td><code>Properties</code></td>
-      <td>该特征值支持的操作类型</td>
-    </tr>
-    <tr>
-      <td>uuid</td>
-      <td><code>string</code></td>
-      <td>蓝牙设备特征值的 uuid</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>properties</td><td><code>Properties</code></td><td>该特征值支持的操作类型</td></tr>
+<tr><td>uuid</td><td><code>string</code></td><td>蓝牙设备特征值的 uuid</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h3>
 <p>该特征值支持的操作类型</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>indicate</td>
-      <td><code>boolean</code></td>
-      <td>该特征值是否支持 indicate 操作</td>
-    </tr>
-    <tr>
-      <td>notify</td>
-      <td><code>boolean</code></td>
-      <td>该特征值是否支持 notify 操作</td>
-    </tr>
-    <tr>
-      <td>read</td>
-      <td><code>boolean</code></td>
-      <td>该特征值是否支持 read 操作</td>
-    </tr>
-    <tr>
-      <td>write</td>
-      <td><code>boolean</code></td>
-      <td>该特征值是否支持 write 操作</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>indicate</td><td><code>boolean</code></td><td>该特征值是否支持 indicate 操作</td></tr>
+<tr><td>notify</td><td><code>boolean</code></td><td>该特征值是否支持 notify 操作</td></tr>
+<tr><td>read</td><td><code>boolean</code></td><td>该特征值是否支持 read 操作</td></tr>
+<tr><td>write</td><td><code>boolean</code></td><td>该特征值是否支持 write 操作</td></tr>
+</tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="示例代码"></a><a href="#示例代码" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>示例代码</h2>
 <pre><code class="hljs css language-tsx">Taro<span class="token punctuation">.</span><span class="token function">getBLEDeviceCharacteristics</span><span class="token punctuation">(</span><span class="token punctuation">{</span>

@@ -68,10 +68,10 @@
 <p>Taro 在编译时提供了一些内置的环境变量来帮助用户做一些特殊处理</p>
 <h3><a class="anchor" aria-hidden="true" id="processenvtaro_env"></a><a href="#processenvtaro_env" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>process.env.TARO_ENV</h3>
 <p>用于判断当前编译类型，目前有 <code>weapp</code> / <code>swan</code> / <code>alipay</code> / <code>h5</code> / <code>rn</code> / <code>tt</code> / <code>qq</code> / <code>quickapp</code> 八个取值，可以通过这个变量来书写对应一些不同环境下的代码，在编译时会将不属于当前编译类型的代码去掉，只保留当前编译类型下的代码，例如想在微信小程序和 H5 端分别引用不同资源</p>
-<pre><code class="hljs css language-jsx"><span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TARO_ENV</span> <span class="token operator">===</span> <span class="token string">"weapp"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path/to/weapp/name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TARO_ENV</span> <span class="token operator">===</span> <span class="token string">"h5"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path/to/h5/name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="hljs css language-jsx"><span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TARO_ENV</span> <span class="token operator">===</span> <span class="token string">'weapp'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path/to/weapp/name'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TARO_ENV</span> <span class="token operator">===</span> <span class="token string">'h5'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path/to/h5/name'</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>同时也可以在 JSX 中使用，决定不同端要加载的组件</p>
@@ -99,34 +99,33 @@
 <p><code>test.weapp.js</code> 文件，这是 <code>Test</code> 组件的 微信小程序 版本</p>
 <p><code>test.swan.js</code> 文件，这是 <code>Test</code> 组件的 百度小程序 版本</p>
 <p><code>test.qq.js</code> 文件，这是 <code>Test</code> 组件的 QQ 小程序 版本</p>
-<p><code>test.jd.js</code> 文件，这是 <code>Test</code> 组件的 京东小程序 版本</p>
 <p><code>test.quickapp.js</code> 文件，这是 <code>Test</code> 组件的 快应用 版本</p>
 <p>四个文件，对外暴露的是统一的接口，它们接受一致的参数，只是内部有针对各自平台的代码实现</p>
 <p>而我们使用 <code>Test</code> 组件的时候，引用的方式依然和之前保持一致，<code>import</code> 的是不带端类型的文件名，在编译的时候会自动识别并添加端类型后缀</p>
-<pre><code class="hljs css language-jsx"><span class="token keyword">import</span> Test <span class="token keyword">from</span> <span class="token string">"../../components/test"</span><span class="token punctuation">;</span>
+<pre><code class="hljs css language-jsx"><span class="token keyword">import</span> Test <span class="token keyword">from</span> <span class="token string">'../../components/test'</span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Test</span></span> <span class="token attr-name">argA</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span></span> <span class="token attr-name">argA</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Test</span></span> <span class="token attr-name">argA</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span></span> <span class="token attr-name">argA</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="多端脚本逻辑"></a><a href="#多端脚本逻辑" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>多端脚本逻辑</h3>
 <p>与多端组件类似，假如有需要针对不同的端写不同的脚本逻辑代码，我们也可以类似的进行处理，遵守的唯一原则就是多端文件对外的接口保持一致。</p>
 <p>例如微信小程序上使用 <code>Taro.setNavigationBarTitle</code> 来设置页面标题，H5 使用 <code>document.title</code>，那么可以封装一个 <code>setTitle</code> 方法来抹平两个平台的差异。</p>
 <p>增加 <code>set_title.h5.js</code>，代码如下</p>
-<pre><code class="hljs css language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  document<span class="token punctuation">.</span>title <span class="token operator">=</span> title<span class="token punctuation">;</span>
+<pre><code class="hljs css language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">setTitle</span> <span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span>title <span class="token operator">=</span> title
 <span class="token punctuation">}</span>
 </code></pre>
 <p>增加 <code>set_title.weapp.js</code>，代码如下</p>
-<pre><code class="hljs css language-js"><span class="token keyword">import</span> Taro <span class="token keyword">from</span> <span class="token string">"@tarojs/taro"</span><span class="token punctuation">;</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre><code class="hljs css language-js"><span class="token keyword">import</span> Taro <span class="token keyword">from</span> <span class="token string">'@tarojs/taro'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">setTitle</span> <span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   Taro<span class="token punctuation">.</span><span class="token function">setNavigationBarTitle</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     title
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>调用的时候，如下使用</p>
-<pre><code class="hljs css language-js"><span class="token keyword">import</span> setTitle <span class="token keyword">from</span> <span class="token string">"../utils/set_title"</span><span class="token punctuation">;</span>
+<pre><code class="hljs css language-js"><span class="token keyword">import</span> setTitle <span class="token keyword">from</span> <span class="token string">'../utils/set_title'</span>
 
-<span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">"页面标题"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">'页面标题'</span><span class="token punctuation">)</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="使用要点"></a><a href="#使用要点" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用要点</h3>
 <p>统一接口的多端文件这一跨平台兼容写法有如下三个使用要点</p>

@@ -13,59 +13,17 @@
 </span></code></pre>
 <h2><a class="anchor" aria-hidden="true" id="functionalpagenavigatorprops"></a><a href="#functionalpagenavigatorprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FunctionalPageNavigatorProps</h2>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th style="text-align:center">默认值</th>
-      <th style="text-align:center">必填</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>version</td>
-      <td><code>&quot;develop&quot; | &quot;trial&quot; | &quot;release&quot;</code></td>
-      <td style="text-align:center"><code>&quot;release&quot;</code></td>
-      <td style="text-align:center">否</td>
-      <td>跳转到的小程序版本，有效值 develop（开发版），trial（体验版），release（正式版）；线上版本必须设置为 release</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td><code>&quot;loginAndGetUserInfo&quot; | &quot;requestPayment&quot; | &quot;chooseAddress&quot;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>要跳转到的功能页</td>
-    </tr>
-    <tr>
-      <td>args</td>
-      <td><code>object</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>功能页参数，参数格式与具体功能页相关</td>
-    </tr>
-    <tr>
-      <td>onSuccess</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>功能页返回，且操作成功时触发， detail 格式与具体功能页相关</td>
-    </tr>
-    <tr>
-      <td>onFail</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>功能页返回，且操作失败时触发， detail 格式与具体功能页相关</td>
-    </tr>
-    <tr>
-      <td>onCancel</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>因用户操作从功能页返回时触发</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th style="text-align:center">默认值</th><th style="text-align:center">必填</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>version</td><td>&quot;develop&quot; or &quot;trial&quot; or &quot;release&quot;</td><td style="text-align:center"><code>&quot;release&quot;</code></td><td style="text-align:center">否</td><td>跳转到的小程序版本，有效值 develop（开发版），trial（体验版），release（正式版）；线上版本必须设置为 release</td></tr>
+<tr><td>name</td><td>&quot;loginAndGetUserInfo&quot; or &quot;requestPayment&quot; or &quot;chooseAddress&quot;</td><td style="text-align:center"></td><td style="text-align:center">否</td><td>要跳转到的功能页</td></tr>
+<tr><td>args</td><td><code>object</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>功能页参数，参数格式与具体功能页相关</td></tr>
+<tr><td>onSuccess</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>功能页返回，且操作成功时触发， detail 格式与具体功能页相关</td></tr>
+<tr><td>onFail</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>功能页返回，且操作失败时触发， detail 格式与具体功能页相关</td></tr>
+<tr><td>onCancel</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>因用户操作从功能页返回时触发</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="api-支持度"></a><a href="#api-支持度" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h3>
 <table>
@@ -84,50 +42,26 @@
 <h3><a class="anchor" aria-hidden="true" id="version"></a><a href="#version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>version</h3>
 <p>version 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>develop</td>
-      <td>开发版</td>
-    </tr>
-    <tr>
-      <td>trial</td>
-      <td>体验版</td>
-    </tr>
-    <tr>
-      <td>release</td>
-      <td>正式版</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>develop</td><td>开发版</td></tr>
+<tr><td>trial</td><td>体验版</td></tr>
+<tr><td>release</td><td>正式版</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="name"></a><a href="#name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>name</h3>
 <p>name 的合法值</p>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>loginAndGetUserInfo</td>
-      <td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/user-info.html">用户信息功能页</a></td>
-    </tr>
-    <tr>
-      <td>requestPayment</td>
-      <td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/request-payment.html">支付功能页</a></td>
-    </tr>
-    <tr>
-      <td>chooseAddress</td>
-      <td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/choose-address.html">收货地址功能页</a></td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>loginAndGetUserInfo</td><td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/user-info.html">用户信息功能页</a></td></tr>
+<tr><td>requestPayment</td><td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/request-payment.html">支付功能页</a></td></tr>
+<tr><td>chooseAddress</td><td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages/choose-address.html">收货地址功能页</a></td></tr>
+</tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="api-支持度-1"></a><a href="#api-支持度-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h2>
 <table>

@@ -92,45 +92,15 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="formprops"></a><a href="#formprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FormProps</h2>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th style="text-align:center">默认值</th>
-      <th style="text-align:center">必填</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>reportSubmit</td>
-      <td><code>boolean</code></td>
-      <td style="text-align:center"><code>false</code></td>
-      <td style="text-align:center">否</td>
-      <td>是否返回 <code>formId</code> 用于发送模板消息。</td>
-    </tr>
-    <tr>
-      <td>reportSubmitTimeout</td>
-      <td><code>number</code></td>
-      <td style="text-align:center"><code>0</code></td>
-      <td style="text-align:center">否</td>
-      <td>等待一段时间（毫秒数）以确认 <code>formId</code> 是否生效。<br />如果未指定这个参数，<code>formId</code> 有很小的概率是无效的（如遇到网络失败的情况）。<br />指定这个参数将可以检测 <code>formId</code> 是否有效，<br />以这个参数的时间作为这项检测的超时时间。<br />如果失败，将返回 <code>requestFormId:fail</code> 开头的 <code>formId</code>。</td>
-    </tr>
-    <tr>
-      <td>onSubmit</td>
-      <td><code>BaseEventOrigFunction&lt;onSubmitEventDetail&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>携带 form 中的数据触发 submit 事件<br />event.detail = { value : {'name': 'value'} , formId: '' }</td>
-    </tr>
-    <tr>
-      <td>onReset</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>表单重置时会触发 reset 事件</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th style="text-align:center">默认值</th><th style="text-align:center">必填</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>reportSubmit</td><td><code>boolean</code></td><td style="text-align:center"><code>false</code></td><td style="text-align:center">否</td><td>是否返回 <code>formId</code> 用于发送模板消息。</td></tr>
+<tr><td>reportSubmitTimeout</td><td><code>number</code></td><td style="text-align:center"><code>0</code></td><td style="text-align:center">否</td><td>等待一段时间（毫秒数）以确认 <code>formId</code> 是否生效。<br />如果未指定这个参数，<code>formId</code> 有很小的概率是无效的（如遇到网络失败的情况）。<br />指定这个参数将可以检测 <code>formId</code> 是否有效，<br />以这个参数的时间作为这项检测的超时时间。<br />如果失败，将返回 <code>requestFormId:fail</code> 开头的 <code>formId</code>。</td></tr>
+<tr><td>onSubmit</td><td><code>BaseEventOrigFunction&lt;onSubmitEventDetail&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>携带 form 中的数据触发 submit 事件<br />event.detail = { value : {'name': 'value'} , formId: '' }</td></tr>
+<tr><td>onReset</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>表单重置时会触发 reset 事件</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="api-支持度"></a><a href="#api-支持度" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h3>
 <table>
@@ -146,28 +116,13 @@
 </table>
 <h3><a class="anchor" aria-hidden="true" id="onsubmiteventdetail"></a><a href="#onsubmiteventdetail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onSubmitEventDetail</h3>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th style="text-align:center">必填</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>value</td>
-      <td><code>{ [formItemName: string]: any; }</code></td>
-      <td style="text-align:center">否</td>
-      <td>当点击 <code>&lt;form&gt;</code> 表单中 <code>form-type</code> 为 <code>submit</code> 的 <code>&lt;button&gt;</code> 组件时，<br />会将表单组件中的 <code>value</code> 值进行提交，<br />需要在表单组件中加上 <code>name</code> 来作为 <code>key</code>。</td>
-    </tr>
-    <tr>
-      <td>formId</td>
-      <td><code>string</code></td>
-      <td style="text-align:center">否</td>
-      <td>当 <code>reportSubmit</code> 为 <code>true</code> 时，返回 <code>formId</code> 用于发送模板消息。</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th style="text-align:center">必填</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>value</td><td><code>{ [formItemName: string]: any; }</code></td><td style="text-align:center">否</td><td>当点击 <code>&lt;form&gt;</code> 表单中 <code>form-type</code> 为 <code>submit</code> 的 <code>&lt;button&gt;</code> 组件时，<br />会将表单组件中的 <code>value</code> 值进行提交，<br />需要在表单组件中加上 <code>name</code> 来作为 <code>key</code>。</td></tr>
+<tr><td>formId</td><td><code>string</code></td><td style="text-align:center">否</td><td>当 <code>reportSubmit</code> 为 <code>true</code> 时，返回 <code>formId</code> 用于发送模板消息。</td></tr>
+</tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="api-支持度-1"></a><a href="#api-支持度-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h2>
 <table>

@@ -92,108 +92,24 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="audioprops"></a><a href="#audioprops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AudioProps</h2>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th style="text-align:center">默认值</th>
-      <th style="text-align:center">必填</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td><code>string</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">是</td>
-      <td>audio 组件的唯一标识符</td>
-    </tr>
-    <tr>
-      <td>src</td>
-      <td><code>string</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">是</td>
-      <td>要播放音频的资源地址</td>
-    </tr>
-    <tr>
-      <td>loop</td>
-      <td><code>boolean</code></td>
-      <td style="text-align:center"><code>false</code></td>
-      <td style="text-align:center">是</td>
-      <td>是否循环播放</td>
-    </tr>
-    <tr>
-      <td>muted</td>
-      <td><code>boolean</code></td>
-      <td style="text-align:center"><code>false</code></td>
-      <td style="text-align:center">否</td>
-      <td>是否静音播放<br /><strong>不推荐使用</strong></td>
-    </tr>
-    <tr>
-      <td>controls</td>
-      <td><code>boolean</code></td>
-      <td style="text-align:center"><code>false</code></td>
-      <td style="text-align:center">是</td>
-      <td>是否显示默认控件</td>
-    </tr>
-    <tr>
-      <td>poster</td>
-      <td><code>string</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">是</td>
-      <td>默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td><code>string</code></td>
-      <td style="text-align:center"><code>&quot;未知音频&quot;</code></td>
-      <td style="text-align:center">是</td>
-      <td>默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效</td>
-    </tr>
-    <tr>
-      <td>author</td>
-      <td><code>string</code></td>
-      <td style="text-align:center"><code>&quot;未知作者&quot;</code></td>
-      <td style="text-align:center">是</td>
-      <td>默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效</td>
-    </tr>
-    <tr>
-      <td>onError</td>
-      <td><code>BaseEventOrigFunction&lt;onErrorEventDetail&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}</td>
-    </tr>
-    <tr>
-      <td>onPlay</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>当开始/继续播放时触发play事件</td>
-    </tr>
-    <tr>
-      <td>onPause</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>当暂停播放时触发 pause 事件</td>
-    </tr>
-    <tr>
-      <td>onTimeUpdate</td>
-      <td><code>BaseEventOrigFunction&lt;onTimeUpdateEventDetail&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}</td>
-    </tr>
-    <tr>
-      <td>onEnded</td>
-      <td><code>BaseEventOrigFunction&lt;any&gt;</code></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:center">否</td>
-      <td>当播放到末尾时触发 ended 事件</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th style="text-align:center">默认值</th><th style="text-align:center">必填</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td><code>string</code></td><td style="text-align:center"></td><td style="text-align:center">是</td><td>audio 组件的唯一标识符</td></tr>
+<tr><td>src</td><td><code>string</code></td><td style="text-align:center"></td><td style="text-align:center">是</td><td>要播放音频的资源地址</td></tr>
+<tr><td>loop</td><td><code>boolean</code></td><td style="text-align:center"><code>false</code></td><td style="text-align:center">是</td><td>是否循环播放</td></tr>
+<tr><td>muted</td><td><code>boolean</code></td><td style="text-align:center"><code>false</code></td><td style="text-align:center">否</td><td>是否静音播放<br /><strong>不推荐使用</strong></td></tr>
+<tr><td>controls</td><td><code>boolean</code></td><td style="text-align:center"><code>false</code></td><td style="text-align:center">是</td><td>是否显示默认控件</td></tr>
+<tr><td>poster</td><td><code>string</code></td><td style="text-align:center"></td><td style="text-align:center">是</td><td>默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效</td></tr>
+<tr><td>name</td><td><code>string</code></td><td style="text-align:center"><code>&quot;未知音频&quot;</code></td><td style="text-align:center">是</td><td>默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效</td></tr>
+<tr><td>author</td><td><code>string</code></td><td style="text-align:center"><code>&quot;未知作者&quot;</code></td><td style="text-align:center">是</td><td>默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效</td></tr>
+<tr><td>onError</td><td><code>BaseEventOrigFunction&lt;onErrorEventDetail&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}</td></tr>
+<tr><td>onPlay</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>当开始/继续播放时触发play事件</td></tr>
+<tr><td>onPause</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>当暂停播放时触发 pause 事件</td></tr>
+<tr><td>onTimeUpdate</td><td><code>BaseEventOrigFunction&lt;onTimeUpdateEventDetail&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}</td></tr>
+<tr><td>onEnded</td><td><code>BaseEventOrigFunction&lt;any&gt;</code></td><td style="text-align:center"></td><td style="text-align:center">否</td><td>当播放到末尾时触发 ended 事件</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="api-支持度"></a><a href="#api-支持度" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h3>
 <table>
@@ -218,68 +134,35 @@
 </table>
 <h3><a class="anchor" aria-hidden="true" id="onerroreventdetail"></a><a href="#onerroreventdetail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onErrorEventDetail</h3>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>errMsg</td>
-      <td><code>1 | 2 | 3 | 4</code></td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th></tr>
+</thead>
+<tbody>
+<tr><td>errMsg</td><td>1 or 2 or 3 or 4</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="ontimeupdateeventdetail"></a><a href="#ontimeupdateeventdetail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onTimeUpdateEventDetail</h3>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>类型</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>currentTime</td>
-      <td><code>number</code></td>
-      <td>当前时间</td>
-    </tr>
-    <tr>
-      <td>duration</td>
-      <td><code>number</code></td>
-      <td>持续时间</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>currentTime</td><td><code>number</code></td><td>当前时间</td></tr>
+<tr><td>duration</td><td><code>number</code></td><td>持续时间</td></tr>
+</tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="mediaerror"></a><a href="#mediaerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MediaError</h3>
 <h4><a class="anchor" aria-hidden="true" id="code"></a><a href="#code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>code</h4>
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>获取资源被用户禁止</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>网络错误</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>解码错误</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>不合适资源</td>
-    </tr>
-  </tbody>
+<thead>
+<tr><th>参数</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>获取资源被用户禁止</td></tr>
+<tr><td>2</td><td>网络错误</td></tr>
+<tr><td>3</td><td>解码错误</td></tr>
+<tr><td>4</td><td>不合适资源</td></tr>
+</tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="api-支持度-1"></a><a href="#api-支持度-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API 支持度</h2>
 <table>
